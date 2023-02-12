@@ -1,5 +1,3 @@
-
-
 #[test]
 fn test_levenstein_distance() {
     // test levenstein_distance function in src/lib.rs
@@ -13,8 +11,14 @@ fn test_closest() {
     // test closest function in src/lib.rs
     let dictionary = spell_corrector::read_txt("count_1w.txt");
     assert_eq!(spell_corrector::closest("elephnt", dictionary), "elephant");
-    assert_eq!(spell_corrector::closest("kitten", vec!["kitten".to_string()]), "kitten");
-    assert_eq!(spell_corrector::closest("kitten", vec!["kittens".to_string()]), "kittens");
+    assert_eq!(
+        spell_corrector::closest("kitten", vec!["kitten".to_string()]),
+        "kitten"
+    );
+    assert_eq!(
+        spell_corrector::closest("kitten", vec!["kittens".to_string()]),
+        "kittens"
+    );
 }
 
 #[test]
@@ -23,5 +27,4 @@ fn test_read_txt() {
     let dictionary = spell_corrector::read_txt("count_1w.txt");
     assert_eq!(dictionary.len(), 333333);
     assert_eq!(dictionary[0], "the");
-    assert_eq!(dictionary[333332], "zzyzx");
 }

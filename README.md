@@ -22,8 +22,11 @@ cargo run
 
 ## examples
 It would prompt `Enter a word:` when you run the project.
+
 When you misspelled a word, it will give the corrected word.
+![wrong](https://github.com/JuliaJHL/imgs_readme/blob/main/rustmini/wrong.png)
 When the spelling is correct, it will prompt `Correct spelling`.
+![right](https://github.com/JuliaJHL/imgs_readme/blob/main/rustmini/right.png)
 
 ## References
 
